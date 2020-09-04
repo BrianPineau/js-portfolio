@@ -1,18 +1,23 @@
-let header = document.querySelector('.header-initial');
+let entireHeader = document.querySelector('.header-initial');
 let innerHeader = document.querySelector('.header-container');
 
 //  Init ScrollMagic
-$(document).ready()
+// $(document).ready()
 let controller = new ScrollMagic.Controller();
 
 //  Build a scene
 let scene = new ScrollMagic.Scene({
-  triggerElement: 'header'
+  triggerElement: '.hook-lead',
+  triggerHook: '0'
 })
-  .setClassToggle('header', 'shrinkHeader') // Add class to header
+  .setClassToggle(entireHeader, 'header-shrink') // Add class to header
+  scene.addIndicators({
+    name: 'shrink header', // custom name for your scene
+    colorStart: 'red', // custom color - colorEnd
+    colorEnd: 'blue',
+    colorTrigger: 'green',
+   })
   .addTo(controller);
-
-
 
 
 
