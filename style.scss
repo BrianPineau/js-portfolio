@@ -1,4 +1,11 @@
 $textColor: rgb(199, 199, 199);
+$titleColor: rgb(0, 0, 0);
+
+@mixin sectionStyle () {
+  h1 {
+    font-weight: 700;
+  }
+}
 
 
 * {
@@ -14,6 +21,7 @@ html {
 
 body {
   overflow: hidden;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 a {
@@ -23,6 +31,8 @@ a {
 li {
   list-style: none;
 }
+
+
 
 /*  Header  */
 header {
@@ -40,12 +50,16 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 0 2%;
-    transition: 500ms;
+    padding: 0 2% 8px 2%;
+    transition: all 0.4s ease 0s;
 
     a {
-      color: $textColor;
+      color: white;
       transition: 500ms;
+      
+      h1 {
+        transition: 100ms;
+      }
     }
 
     .header-links {
@@ -55,6 +69,10 @@ header {
       li:nth-child(2) {
       margin: 0 1.4em;
       }
+
+      li:nth-child(3) {
+        margin-right: 1.4em;
+      }
     }
   }
 }
@@ -63,7 +81,11 @@ header:hover {
   height: 108px;
   background-color: #fafafa;
   a {
-    color: #9CDFC8;
+    color: $titleColor;
+    
+    h1 {
+      color: $titleColor;
+    }
   }
 }
 
@@ -74,13 +96,14 @@ header:hover {
   width: 100%;
   transition: 500ms;
   z-index: 100;
-  height: 50px;
+  height: 70px;
   background-color: white;
+  box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
 }
 
 /*  Body/Parallax  */
 main {
-  color: rgb(21, 184, 0);
+  color: white;
   margin: 0; 
   padding: 0;
   perspective: 1px;
@@ -90,14 +113,51 @@ main {
   overflow-y: scroll;
   overflow-x: hidden;
 
-  .par-inner-container {
+  .about-container {
     z-index: 2;
     position: absolute;
     top: 100vh;
-    background: black;
+    height: 60vh;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    color: grey;
+
+    .about-inner-container {
+      width: 60%;
+      margin: 150px 0 0 10%;
+
+      h1 {
+        color: black;
+        font-size: 3.5em;
+        margin-bottom: 60px;
+        line-height: 60px;
+      }
+
+      p {
+        color: $textColor;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .skills-container {
+    z-index: 2;
+    position: absolute;
+    top: 200vh;
+    height: 80vh;
+    background-color: rgb(228, 228, 228);
     line-height: 30px;
     padding: 40px;
     color: grey;
+
+    .skills-flex {
+      margin:
+      display: flex;
+      
+      .card-2 {
+        margin: 0 30px;
+      }
+    }
   }
 }
 
@@ -115,12 +175,15 @@ main {
     top: 10px;
     height: 5px;
     width: 100px;
+    margin-top: 20px;
   }
 
   h1 {
     position: absolute;
+    width: 100vw;
     top: 50%;
-    left: 50%;
+    left: 40%;
+    font-size: 4.5em;
     transform: translate(-50%, -50%);
   }
 }
@@ -138,7 +201,7 @@ main {
     right: 0;
     bottom: 0;
     display: block;
-    background: url(./images/clouds.jpg);
+    background: url(./images/trees.jpg);
     background-size: cover;
     transform-origin: center center 0;
     transform: translateZ(-1px) scale(2);
@@ -146,11 +209,7 @@ main {
     min-height: 100vh;
 }
 
-/*  About Me  */
-main p {
-  font-size: 1.2rem;
-  margin: 0 20%;
-}
+
 
 
 

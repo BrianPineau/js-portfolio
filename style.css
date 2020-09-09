@@ -12,6 +12,7 @@ html {
 
 body {
   overflow: hidden;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 a {
@@ -46,15 +47,24 @@ header .header-container {
           justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 0 2%;
-  -webkit-transition: 500ms;
-  transition: 500ms;
+  padding: 0 2% 8px 2%;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+header .header-container .brand-logo {
+  color: #c7c7c7;
 }
 
 header .header-container a {
   color: #c7c7c7;
   -webkit-transition: 500ms;
   transition: 500ms;
+}
+
+header .header-container a h1 {
+  -webkit-transition: 100ms;
+  transition: 100ms;
 }
 
 header .header-container .header-links {
@@ -68,13 +78,21 @@ header .header-container .header-links li:nth-child(2) {
   margin: 0 1.4em;
 }
 
+header .header-container .header-links li:nth-child(3) {
+  margin-right: 1.4em;
+}
+
 header:hover {
   height: 108px;
   background-color: #fafafa;
 }
 
 header:hover a {
-  color: #9CDFC8;
+  color: black;
+}
+
+header:hover a h1 {
+  color: black;
 }
 
 .header-shrink {
@@ -85,13 +103,19 @@ header:hover a {
   -webkit-transition: 500ms;
   transition: 500ms;
   z-index: 100;
-  height: 50px;
+  height: 70px;
   background-color: white;
+  -webkit-box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
+          box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
+}
+
+.header-shrink h1 {
+  color: black;
 }
 
 /*  Body/Parallax  */
 main {
-  color: #15b800;
+  color: white;
   margin: 0;
   padding: 0;
   -webkit-perspective: 1px;
@@ -104,14 +128,52 @@ main {
   overflow-x: hidden;
 }
 
-main .par-inner-container {
+main .about-container {
   z-index: 2;
   position: absolute;
   top: 100vh;
-  background: black;
+  height: 60vh;
+  background-color: white;
+  padding: 40px;
+  color: grey;
+}
+
+main .about-container .about-inner-container {
+  width: 60%;
+  margin: 150px 0 0 10%;
+}
+
+main .about-container .about-inner-container h1 {
+  color: black;
+  font-size: 3.5em;
+  margin-bottom: 60px;
+  line-height: 60px;
+}
+
+main .about-container .about-inner-container p {
+  color: #c7c7c7;
+  line-height: 30px;
+}
+
+main .skills-container {
+  z-index: 2;
+  position: absolute;
+  top: 200vh;
+  height: 80vh;
+  background-color: #e4e4e4;
   line-height: 30px;
   padding: 40px;
   color: grey;
+}
+
+main .skills-container .skills-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .skills-container .skills-flex .card-2 {
+  margin: 0 30px;
 }
 
 /*  Hero Image  */
@@ -131,12 +193,15 @@ main .par-inner-container {
   top: 10px;
   height: 5px;
   width: 100px;
+  margin-top: 20px;
 }
 
 .jumbo-foreground h1 {
   position: absolute;
+  width: 100vw;
   top: 50%;
-  left: 50%;
+  left: 40%;
+  font-size: 4.5em;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -154,7 +219,7 @@ main .par-inner-container {
   right: 0;
   bottom: 0;
   display: block;
-  background: url(./images/clouds.jpg);
+  background: url(./images/trees.jpg);
   background-size: cover;
   -webkit-transform-origin: center center 0;
           transform-origin: center center 0;
@@ -162,11 +227,5 @@ main .par-inner-container {
           transform: translateZ(-1px) scale(2);
   z-index: -1;
   min-height: 100vh;
-}
-
-/*  About Me  */
-main p {
-  font-size: 1.2rem;
-  margin: 0 20%;
 }
 /*# sourceMappingURL=style.css.map */
