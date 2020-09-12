@@ -57,7 +57,7 @@ header {
       color: $textColor;
     }
     a {
-      transition: 500ms;
+      transition: 100ms;
       
       h1 {
         transition: 100ms;
@@ -210,6 +210,7 @@ main {
     top: 50%;
     left: 60%;
     font-size: 4.5em;
+    color: $textColor;
     transform: translate(-50%, -50%);
   }
 }

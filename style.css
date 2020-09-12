@@ -57,8 +57,8 @@ header .header-container .brand-logo {
 }
 
 header .header-container a {
-  -webkit-transition: 500ms;
-  transition: 500ms;
+  -webkit-transition: 100ms;
+  transition: 100ms;
 }
 
 header .header-container a h1 {
@@ -235,6 +235,7 @@ main .skills-container .skills-inner-container .skills-flex .card-2 {
   top: 50%;
   left: 60%;
   font-size: 4.5em;
+  color: #c7c7c7;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
