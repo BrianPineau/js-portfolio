@@ -89,6 +89,9 @@ header:hover {
   h1 {
     color: $titleColor;
   }
+  a {
+    color: $titleColor !important;
+  }
 }
 
 .header-shrink {
@@ -104,11 +107,13 @@ header:hover {
   h1 {
     color: $titleColor;
   }
+  a {
+    color: $titleColor !important;
+  }
 }
 
 /*  Body/Parallax  */
 main {
-  color: white;
   margin: 0; 
   padding: 0;
   perspective: 1px;
@@ -124,20 +129,21 @@ main {
     z-index: 2;
     position: absolute;
     top: 100vh;
-    height: 60vh;
+    height: 70vh;
     background-color: rgb(255, 255, 255);
     padding: 40px;
     color: grey;
     .about-inner-container {
       width: 60%;
-      margin: 150px 0 0 10%;
+      margin: 150px 10% 0 10%;
       h1 {
         @include sectionTitle();
       }
 
       p {
         color: $textColor;
-        line-height: 30px;
+        font-size: 1.5em;
+        line-height: 45px;
       }
     }
   }
@@ -152,7 +158,6 @@ main {
     width: 100vw;
     background-color: rgb(245, 245, 245);
     line-height: 30px;
-    padding: 40px;
     .skills-inner-container {
       width: 100%;
       margin: 150px 10% 120px 10%;
@@ -162,14 +167,20 @@ main {
 
       .skills-flex {
         display: flex;
+        width: 81%;
         .card {
           height: 300px;
-          width: 400px;
-          border: 1px solid black;
+          width: 30%;
+          color: $titleColor;
+          overflow: hidden;
+          h2 {
+            font-weight: 200;
+            margin-bottom: 30px;
+          }
         }
-        
+
         .card-2 {
-          margin: 0 30px;
+          margin: 0 60px;
         }
       }
     }
@@ -183,7 +194,7 @@ main {
   position: relative;
   transform-style: inherit;
   width: 100vw;
-  text-align: center;
+  text-align: left;
 
   .hook-lead {
     position: absolute;
@@ -193,11 +204,11 @@ main {
     margin-top: 20px;
   }
 
-  h1 {
+  #text-type {
     position: absolute;
     width: 100vw;
     top: 50%;
-    left: 40%;
+    left: 60%;
     font-size: 4.5em;
     transform: translate(-50%, -50%);
   }

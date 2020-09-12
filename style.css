@@ -94,6 +94,10 @@ header:hover h1 {
   color: black;
 }
 
+header:hover a {
+  color: black !important;
+}
+
 .header-shrink {
   position: fixed;
   top: 0;
@@ -112,9 +116,12 @@ header:hover h1 {
   color: black;
 }
 
+.header-shrink a {
+  color: black !important;
+}
+
 /*  Body/Parallax  */
 main {
-  color: white;
   margin: 0;
   padding: 0;
   -webkit-perspective: 1px;
@@ -133,7 +140,7 @@ main .about-container {
   z-index: 2;
   position: absolute;
   top: 100vh;
-  height: 60vh;
+  height: 70vh;
   background-color: white;
   padding: 40px;
   color: grey;
@@ -141,7 +148,7 @@ main .about-container {
 
 main .about-container .about-inner-container {
   width: 60%;
-  margin: 150px 0 0 10%;
+  margin: 150px 10% 0 10%;
 }
 
 main .about-container .about-inner-container h1 {
@@ -153,7 +160,8 @@ main .about-container .about-inner-container h1 {
 
 main .about-container .about-inner-container p {
   color: #c7c7c7;
-  line-height: 30px;
+  font-size: 1.5em;
+  line-height: 45px;
 }
 
 main .skills-container {
@@ -164,7 +172,6 @@ main .skills-container {
   width: 100vw;
   background-color: whitesmoke;
   line-height: 30px;
-  padding: 40px;
 }
 
 main .skills-container .skills-inner-container {
@@ -183,16 +190,23 @@ main .skills-container .skills-inner-container .skills-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 81%;
 }
 
 main .skills-container .skills-inner-container .skills-flex .card {
   height: 300px;
-  width: 400px;
-  border: 1px solid black;
+  width: 30%;
+  color: black;
+  overflow: hidden;
+}
+
+main .skills-container .skills-inner-container .skills-flex .card h2 {
+  font-weight: 200;
+  margin-bottom: 30px;
 }
 
 main .skills-container .skills-inner-container .skills-flex .card-2 {
-  margin: 0 30px;
+  margin: 0 60px;
 }
 
 /*  Hero Image  */
@@ -204,7 +218,7 @@ main .skills-container .skills-inner-container .skills-flex .card-2 {
   -webkit-transform-style: inherit;
           transform-style: inherit;
   width: 100vw;
-  text-align: center;
+  text-align: left;
 }
 
 .jumbo-foreground .hook-lead {
@@ -215,11 +229,11 @@ main .skills-container .skills-inner-container .skills-flex .card-2 {
   margin-top: 20px;
 }
 
-.jumbo-foreground h1 {
+.jumbo-foreground #text-type {
   position: absolute;
   width: 100vw;
   top: 50%;
-  left: 40%;
+  left: 60%;
   font-size: 4.5em;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
