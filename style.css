@@ -134,6 +134,7 @@ main {
   overflow-x: hidden;
   /*  About Me Section  */
   /*  Skills Section  */
+  /*  Portfolio Section  */
 }
 
 main .about-container {
@@ -207,6 +208,32 @@ main .skills-container .skills-inner-container .skills-flex .card h2 {
 
 main .skills-container .skills-inner-container .skills-flex .card-2 {
   margin: 0 60px;
+}
+
+main .portfolio-container {
+  z-index: 2;
+  position: absolute;
+  top: 300vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+}
+
+main .portfolio-container .portfolio-inner-container {
+  width: 100%;
+  margin: 150px 10% 120px 10%;
+}
+
+main .portfolio-container .portfolio-inner-container h1 {
+  color: black;
+  font-size: 3.5em;
+  margin-bottom: 60px;
+  line-height: 60px;
+}
+
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container {
+  display: -ms-grid;
+  display: grid;
 }
 
 /*  Hero Image  */

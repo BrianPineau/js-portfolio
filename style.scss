@@ -185,6 +185,27 @@ main {
       }
     }
   }
+
+
+/*  Portfolio Section  */
+  .portfolio-container {
+    z-index: 2;
+    position: absolute;
+    top: 300vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(245, 245, 245);
+    .portfolio-inner-container {
+      width: 100%;
+      margin: 150px 10% 120px 10%;
+      h1 {
+        @include sectionTitle();
+      }
+      .portfolio-grid-container {
+        display: grid;
+      }
+    }
+  }
 }
 
 /*  Hero Image  */
