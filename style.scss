@@ -203,6 +203,33 @@ main {
       }
       .portfolio-grid-container {
         display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(450px, auto);
+        grid-gap: 1px;
+        width: 80%;
+        margin-right: 20%;
+        .portfolio-card {
+          .card-flex-cont {
+            display: flex;
+            flex-direction: column;
+            .port-img-cont {
+              width: 100%;
+              height: 350px;
+              background-image: url('./images/resort.jpg');
+              background-size: cover;
+              background-position: center;
+            }
+            .port-text-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              height: 100px;
+              h2 {
+                font-size: 2em;
+              }
+            }
+          }
+        }
       }
     }
   }
