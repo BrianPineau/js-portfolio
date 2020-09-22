@@ -1,4 +1,6 @@
 let entireHeader = document.querySelector('.header-initial');
+let aboutTitle = document.querySelector('.about-title');
+let aboutText = document.querySelector('.about-text');
 
 
 
@@ -34,7 +36,7 @@ typewriter.typeString('Make websites great again!')
 
 
 
-//Scroll Effects
+//  SCROLL EFFECTS
 //  Init ScrollMagic
 let controller = new ScrollMagic.Controller();
 
@@ -44,14 +46,36 @@ let scene = new ScrollMagic.Scene({
   triggerHook: '0'
 })
   .setClassToggle(entireHeader, 'header-shrink') // Add class to header
-  // scene.addIndicators({
-  //   name: 'shrink header', // custom name for your scene
-  //   colorStart: 'red',
-  //   colorTrigger: 'green',
-  //  })
+  .addTo(controller);
+
+
+let scene2 = new ScrollMagic.Scene({
+  triggerElement: '.about-container',
+  triggerHook: '0.7'
+})
+  .setClassToggle(aboutTitle, 'float-up') // Add class to header
+  scene2.addIndicators({
+    name: 'shrink header', // custom name for your scene
+    colorStart: 'red',
+    colorTrigger: 'green',
+   })
+  .addTo(controller);
+  
+
+let scene3 = new ScrollMagic.Scene({
+  triggerElement: '.about-container',
+  triggerHook: '0.5'
+})
+  .setClassToggle(aboutText, 'float-in') // Add class to header
+  scene3.addIndicators({
+    name: 'shrink header', // custom name for your scene
+    colorStart: 'red',
+    colorTrigger: 'green',
+   })
   .addTo(controller);
 
 
 
 
 
+       

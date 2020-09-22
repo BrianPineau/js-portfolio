@@ -59,7 +59,7 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 0 2% 8px 2%;
+    padding: 0 2%;
     transition: all 0.4s ease 0s;
     .brand-logo {
       color: $textColor;
@@ -75,6 +75,7 @@ header {
     .header-links {
       display: flex;
       font-size: 1.3em;
+      margin-bottom: 0;
 
       li:nth-child(2) {
       margin: 0 1.4em;
@@ -110,7 +111,7 @@ header:hover {
   transition: 500ms;
   z-index: 100;
   height: 70px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
   h1 {
     color: $titleColor;
@@ -144,14 +145,43 @@ main {
     .about-inner-container {
       width: 60%;
       margin: 150px 10% 0 10%;
-      h1 {
-        @include sectionTitle();
-      }
+      .about-scroll {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        // background: rgba(0, 255, 0, 0.8);
+        h1 {
+          position: absolute;
+          top: 20px;
+          left: 0;
+          opacity: 0;
+          @include sectionTitle();
+          transition: all 0.4s ease 0s;
+        }
 
-      p {
-        color: $textColor;
-        font-size: 1.5em;
-        line-height: 45px;
+        p {
+          position: relative;
+          top: 180px;
+          left: -30px;
+          color: $textColor;
+          font-size: 1.5em;
+          line-height: 45px;
+          opacity: 0;
+          transition: all 0.4s ease-in-out 0s;
+        }
+
+        .float-up {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 1;
+        }
+
+        .float-in {
+          top: 180px;
+          left: 0;
+          opacity: 1;
+        }
       }
     }
   }
@@ -169,26 +199,31 @@ main {
     .skills-inner-container {
       width: 100%;
       margin: 150px 10% 120px 10%;
-      h1 {
-        @include sectionTitle();
-      }
-
-      .skills-flex {
-        display: flex;
-        width: 81%;
-        .card {
-          height: 300px;
-          width: 30%;
-          color: $titleColor;
-          overflow: hidden;
-          h2 {
-            font-weight: 200;
-            margin-bottom: 30px;
-          }
+      .skills-scroll {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        h1 {
+          @include sectionTitle();
         }
-
-        .card-2 {
-          margin: 0 60px;
+  
+        .skills-flex {
+          display: flex;
+          width: 81%;
+          .card {
+            height: 300px;
+            width: 30%;
+            color: $titleColor;
+            overflow: hidden;
+            h2 {
+              font-weight: 200;
+              margin-bottom: 30px;
+            }
+          }
+  
+          .card-2 {
+            margin: 0 60px;
+          }
         }
       }
     }

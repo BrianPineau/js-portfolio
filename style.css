@@ -47,7 +47,7 @@ header .header-container {
           justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 0 2% 8px 2%;
+  padding: 0 2%;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
@@ -71,6 +71,7 @@ header .header-container .header-links {
   display: -ms-flexbox;
   display: flex;
   font-size: 1.3em;
+  margin-bottom: 0;
 }
 
 header .header-container .header-links li:nth-child(2) {
@@ -107,7 +108,7 @@ header:hover a {
   transition: 500ms;
   z-index: 100;
   height: 70px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
   -webkit-box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
           box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
 }
@@ -153,17 +154,48 @@ main .about-container .about-inner-container {
   margin: 150px 10% 0 10%;
 }
 
-main .about-container .about-inner-container h1 {
+main .about-container .about-inner-container .about-scroll {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+main .about-container .about-inner-container .about-scroll h1 {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  opacity: 0;
   color: black;
   font-size: 3.5em;
   margin-bottom: 60px;
   line-height: 60px;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
-main .about-container .about-inner-container p {
+main .about-container .about-inner-container .about-scroll p {
+  position: relative;
+  top: 180px;
+  left: -30px;
   color: #c7c7c7;
   font-size: 1.5em;
   line-height: 45px;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+main .about-container .about-inner-container .about-scroll .float-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+main .about-container .about-inner-container .about-scroll .float-in {
+  top: 180px;
+  left: 0;
+  opacity: 1;
 }
 
 main .skills-container {
@@ -181,33 +213,39 @@ main .skills-container .skills-inner-container {
   margin: 150px 10% 120px 10%;
 }
 
-main .skills-container .skills-inner-container h1 {
+main .skills-container .skills-inner-container .skills-scroll {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+main .skills-container .skills-inner-container .skills-scroll h1 {
   color: black;
   font-size: 3.5em;
   margin-bottom: 60px;
   line-height: 60px;
 }
 
-main .skills-container .skills-inner-container .skills-flex {
+main .skills-container .skills-inner-container .skills-scroll .skills-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 81%;
 }
 
-main .skills-container .skills-inner-container .skills-flex .card {
+main .skills-container .skills-inner-container .skills-scroll .skills-flex .card {
   height: 300px;
   width: 30%;
   color: black;
   overflow: hidden;
 }
 
-main .skills-container .skills-inner-container .skills-flex .card h2 {
+main .skills-container .skills-inner-container .skills-scroll .skills-flex .card h2 {
   font-weight: 200;
   margin-bottom: 30px;
 }
 
-main .skills-container .skills-inner-container .skills-flex .card-2 {
+main .skills-container .skills-inner-container .skills-scroll .skills-flex .card-2 {
   margin: 0 60px;
 }
 
