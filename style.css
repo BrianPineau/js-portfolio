@@ -162,27 +162,27 @@ main .about-container .about-inner-container .about-scroll {
 
 main .about-container .about-inner-container .about-scroll h1 {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 0;
   opacity: 0;
   color: black;
   font-size: 3.5em;
   margin-bottom: 60px;
   line-height: 60px;
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 
 main .about-container .about-inner-container .about-scroll p {
   position: relative;
   top: 180px;
-  left: -30px;
+  left: 80px;
   color: #c7c7c7;
   font-size: 1.5em;
   line-height: 45px;
   opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
 }
 
 main .about-container .about-inner-container .about-scroll .float-up {
@@ -219,14 +219,29 @@ main .skills-container .skills-inner-container .skills-scroll {
   width: 100%;
 }
 
-main .skills-container .skills-inner-container .skills-scroll h1 {
+main .skills-container .skills-inner-container .skills-scroll .skills-title {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  opacity: 0;
   color: black;
   font-size: 3.5em;
   margin-bottom: 60px;
   line-height: 60px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+main .skills-container .skills-inner-container .skills-scroll .float-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
 }
 
 main .skills-container .skills-inner-container .skills-scroll .skills-flex {
+  position: absolute;
+  top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

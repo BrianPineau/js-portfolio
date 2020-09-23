@@ -1,7 +1,7 @@
 let entireHeader = document.querySelector('.header-initial');
 let aboutTitle = document.querySelector('.about-title');
 let aboutText = document.querySelector('.about-text');
-
+let skillsTitle = document.querySelector('.skills-title');
 
 
 //Website Loader
@@ -51,23 +51,26 @@ let scene = new ScrollMagic.Scene({
 
 let scene2 = new ScrollMagic.Scene({
   triggerElement: '.about-container',
-  triggerHook: '0.7'
+  triggerHook: '0.6'
 })
   .setClassToggle(aboutTitle, 'float-up') // Add class to header
-  scene2.addIndicators({
-    name: 'shrink header', // custom name for your scene
-    colorStart: 'red',
-    colorTrigger: 'green',
-   })
   .addTo(controller);
   
 
 let scene3 = new ScrollMagic.Scene({
   triggerElement: '.about-container',
-  triggerHook: '0.5'
+  triggerHook: '0.4'
 })
   .setClassToggle(aboutText, 'float-in') // Add class to header
-  scene3.addIndicators({
+  .addTo(controller);
+  
+    
+let scene4 = new ScrollMagic.Scene({
+  triggerElement: '.skills-container',
+  triggerHook: '0.6'
+})
+  .setClassToggle(skillsTitle, 'float-up') // Add class to header
+  scene4.addIndicators({
     name: 'shrink header', // custom name for your scene
     colorStart: 'red',
     colorTrigger: 'green',

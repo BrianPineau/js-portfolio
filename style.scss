@@ -149,25 +149,24 @@ main {
         position: relative;
         height: 100%;
         width: 100%;
-        // background: rgba(0, 255, 0, 0.8);
         h1 {
           position: absolute;
-          top: 20px;
+          top: 30px;
           left: 0;
           opacity: 0;
           @include sectionTitle();
-          transition: all 0.4s ease 0s;
+          transition: all 0.5s ease-in-out 0s;
         }
 
         p {
           position: relative;
           top: 180px;
-          left: -30px;
+          left: 80px;
           color: $textColor;
           font-size: 1.5em;
           line-height: 45px;
           opacity: 0;
-          transition: all 0.4s ease-in-out 0s;
+          transition: all 0.5s ease-out 0s;
         }
 
         .float-up {
@@ -203,11 +202,25 @@ main {
         position: relative;
         height: 100%;
         width: 100%;
-        h1 {
+        .skills-title {
+          position: absolute;
+          top: 60px;
+          left: 0;
+          opacity: 0;
           @include sectionTitle();
+          transition: all 0.5s ease-in-out 0s;
+        }
+
+        .float-up {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 1;
         }
   
         .skills-flex {
+          position: absolute;
+          top: 120px;
           display: flex;
           width: 81%;
           .card {
