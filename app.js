@@ -2,6 +2,9 @@ let entireHeader = document.querySelector('.header-initial');
 let aboutTitle = document.querySelector('.about-title');
 let aboutText = document.querySelector('.about-text');
 let skillsTitle = document.querySelector('.skills-title');
+let firstCard = document.querySelector('.card-1');
+let secondCard = document.querySelector('.card-2');
+let thirdCard = document.querySelector('.card-3');
 
 
 //Website Loader
@@ -70,12 +73,40 @@ let scene4 = new ScrollMagic.Scene({
   triggerHook: '0.6'
 })
   .setClassToggle(skillsTitle, 'float-up') // Add class to header
-  scene4.addIndicators({
+  // scene4.addIndicators({
+  //   name: 'shrink header', // custom name for your scene
+  //   colorStart: 'red',
+  //   colorTrigger: 'green',
+  //  })
+    .addTo(controller);
+  
+
+let scene5 = new ScrollMagic.Scene({
+  triggerElement: '.skills-title',
+  triggerHook: '0.6'
+})
+  .setClassToggle(firstCard, 'card-up-1') // Add class to header
+  scene5.addIndicators({
     name: 'shrink header', // custom name for your scene
     colorStart: 'red',
     colorTrigger: 'green',
    })
+    .addTo(controller);
+  
+let scene6 = new ScrollMagic.Scene({
+  triggerElement: '.skills-title',
+  triggerHook: '0.6'
+})
+  .setClassToggle(secondCard, 'card-up-2') // Add class to header
   .addTo(controller);
+
+let scene7 = new ScrollMagic.Scene({
+  triggerElement: '.skills-title',
+  triggerHook: '0.6'
+})
+  .setClassToggle(thirdCard, 'card-up-3') // Add class to header
+  .addTo(controller);
+  
 
 
 
