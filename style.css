@@ -314,15 +314,80 @@ main .portfolio-container .portfolio-inner-container .portfolio-grid-container {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-auto-rows: minmax(450px, auto);
-  grid-gap: 1px;
+  grid-gap: 2em;
   width: 80%;
   background-color: white;
   padding: 10px;
   margin-right: 20%;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .portfolio-card:hover {
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont {
+  height: 400px;
+  width: 350px;
+}
+
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont {
   position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-cont {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -150px;
+  background-color: rebeccapurple;
+  height: 450px;
+  width: 300px;
+  z-index: 2;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-hover {
+  top: -150px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-cont-1 {
+  height: 100%;
+  background-image: url("./images/resort.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-cont-2 {
+  background-image: url("./images/shop.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont {
+  background: #747474;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -150px;
+  height: 350px;
+  width: 300px;
+  z-index: 1;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-cont-hover {
+  top: 100px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+main .portfolio-container .portfolio-inner-container .portfolio-grid-container .portfolio-card:hover {
   height: 600px;
   width: 600px;
 }
