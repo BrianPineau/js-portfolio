@@ -9,6 +9,7 @@ let thirdCard = document.querySelector('.card-3');
 let projectCard = document.querySelector('.port-card-cont');
 let projectImage = document.querySelector('.port-img-cont-1');
 let projectContent = document.querySelector('.port-info-cont');
+let projectText = document.querySelector('.port-inner-info');
 
 //Website Loader
 document.onreadystatechange = function() { 
@@ -118,9 +119,11 @@ let scene7 = new ScrollMagic.Scene({
 projectCard.addEventListener('mouseover', () => {
   projectImage.classList.add('port-hover');
   projectContent.classList.add('port-cont-hover');
+  projectText.classList.add('port-info-hover');
 });
 
 projectCard.addEventListener('mouseout', () => {
   projectImage.classList.remove('port-hover');
   projectContent.classList.remove('port-cont-hover');
+  projectText.classList.remove('port-info-hover');
 });
