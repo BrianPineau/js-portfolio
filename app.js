@@ -6,10 +6,15 @@ let firstCard = document.querySelector('.card-1');
 let secondCard = document.querySelector('.card-2');
 let thirdCard = document.querySelector('.card-3');
 
-let projectCard = document.querySelector('.port-card-cont');
-let projectImage = document.querySelector('.port-img-cont-1');
+let projectCard1 = document.querySelector('.port-card-1');
+let projectCard2 = document.querySelector('.port-card-2');
+let projectCard3 = document.querySelector('.port-card-3');
+let projectCard4 = document.querySelector('.port-card-4');
+let projectImage = document.querySelector('.port-img-cont');
 let projectContent = document.querySelector('.port-info-cont');
 let projectText = document.querySelector('.port-inner-info');
+let portfolioTitle = document.querySelector('.portfolio-title');
+
 
 //Website Loader
 document.onreadystatechange = function() { 
@@ -47,7 +52,7 @@ typewriter.typeString('Make websites great again!')
 //  Init ScrollMagic
 let controller = new ScrollMagic.Controller();
 
-//  Build a scene
+//  Header Shrink Scroll Animation
 let scene = new ScrollMagic.Scene({
   triggerElement: '.hook-lead',
   triggerHook: '0'
@@ -55,7 +60,7 @@ let scene = new ScrollMagic.Scene({
   .setClassToggle(entireHeader, 'header-shrink') // Add class to header
   .addTo(controller);
 
-
+//  About Header Scroll Animation
 let scene2 = new ScrollMagic.Scene({
   triggerElement: '.about-container',
   triggerHook: '0.6'
@@ -63,7 +68,7 @@ let scene2 = new ScrollMagic.Scene({
   .setClassToggle(aboutTitle, 'float-up') // Add class to header
   .addTo(controller);
   
-
+//  About Body Scroll Animation
 let scene3 = new ScrollMagic.Scene({
   triggerElement: '.about-container',
   triggerHook: '0.4'
@@ -71,32 +76,23 @@ let scene3 = new ScrollMagic.Scene({
   .setClassToggle(aboutText, 'float-in') // Add class to header
   .addTo(controller);
   
-    
+//  Skills Header Scroll Animation 
 let scene4 = new ScrollMagic.Scene({
   triggerElement: '.skills-container',
   triggerHook: '0.6'
 })
-  .setClassToggle(skillsTitle, 'float-up') // Add class to header
-  // scene4.addIndicators({
-  //   name: 'shrink header', // custom name for your scene
-  //   colorStart: 'red',
-  //   colorTrigger: 'green',
-  //  })
-    .addTo(controller);
+  .setClassToggle(skillsTitle, 'float-up')
+  .addTo(controller);
   
-
+//  Skills 1st Card Scroll Animation
 let scene5 = new ScrollMagic.Scene({
   triggerElement: '.skills-title',
   triggerHook: '0.6'
 })
-  .setClassToggle(firstCard, 'card-up-1') // Add class to header
-  scene5.addIndicators({
-    name: 'shrink header', // custom name for your scene
-    colorStart: 'red',
-    colorTrigger: 'green',
-   })
-    .addTo(controller);
+  .setClassToggle(firstCard, 'card-up-1')
+  .addTo(controller);
   
+//  Skills 2nd Card Scroll Animations
 let scene6 = new ScrollMagic.Scene({
   triggerElement: '.skills-title',
   triggerHook: '0.6'
@@ -104,26 +100,110 @@ let scene6 = new ScrollMagic.Scene({
   .setClassToggle(secondCard, 'card-up-2') // Add class to header
   .addTo(controller);
 
+//  Skills 3rd Card Scroll Animations
 let scene7 = new ScrollMagic.Scene({
   triggerElement: '.skills-title',
   triggerHook: '0.6'
 })
   .setClassToggle(thirdCard, 'card-up-3') // Add class to header
   .addTo(controller);
-  
+
+//  Portfolio Title Scroll Animations
+let scene8 = new ScrollMagic.Scene({
+  triggerElement: '.portfolio-title',
+  triggerHook: '0.1'
+})
+  .setClassToggle(portfolioTitle, 'port-float-up') // Add class to header
+  scene5.addIndicators({
+    name: 'shrink header', // custom name for your scene
+    colorStart: 'red',
+    colorTrigger: 'green',
+   })
+  .addTo(controller);
 
 
 
 
-
-projectCard.addEventListener('mouseover', () => {
-  projectImage.classList.add('port-hover');
-  projectContent.classList.add('port-cont-hover');
-  projectText.classList.add('port-info-hover');
+//  Card Animation
+projectCard1.addEventListener('mouseover', () => {
+  document.querySelector('.port-img-1').classList.add('port-hover');
+  document.querySelector('.port-info-1').classList.add('port-cont-hover');
+  document.querySelector('.port-inner-1').classList.add('port-info-hover');
 });
 
-projectCard.addEventListener('mouseout', () => {
-  projectImage.classList.remove('port-hover');
-  projectContent.classList.remove('port-cont-hover');
-  projectText.classList.remove('port-info-hover');
+projectCard2.addEventListener('mouseover', () => {
+  document.querySelector('.port-img-2').classList.add('port-hover');
+  document.querySelector('.port-info-2').classList.add('port-cont-hover');
+  document.querySelector('.port-inner-2').classList.add('port-info-hover');
 });
+
+projectCard3.addEventListener('mouseover', () => {
+  document.querySelector('.port-img-3').classList.add('port-hover');
+  document.querySelector('.port-info-3').classList.add('port-cont-hover');
+  document.querySelector('.port-inner-3').classList.add('port-info-hover');
+});
+
+projectCard4.addEventListener('mouseover', () => {
+  document.querySelector('.port-img-4').classList.add('port-hover');
+  document.querySelector('.port-info-4').classList.add('port-cont-hover');
+  document.querySelector('.port-inner-4').classList.add('port-info-hover');
+});
+
+
+//  Reverse Card Animation
+projectCard1.addEventListener('mouseout', () => {
+  document.querySelector('.port-img-1').classList.remove('port-hover');
+  document.querySelector('.port-info-1').classList.remove('port-cont-hover');
+  document.querySelector('.port-inner-1').classList.remove('port-info-hover');
+});
+
+projectCard2.addEventListener('mouseout', () => {
+  document.querySelector('.port-img-2').classList.remove('port-hover');
+  document.querySelector('.port-info-2').classList.remove('port-cont-hover');
+  document.querySelector('.port-inner-2').classList.remove('port-info-hover');
+});
+
+projectCard3.addEventListener('mouseout', () => {
+  document.querySelector('.port-img-3').classList.remove('port-hover');
+  document.querySelector('.port-info-3').classList.remove('port-cont-hover');
+  document.querySelector('.port-inner-3').classList.remove('port-info-hover');
+});
+
+projectCard4.addEventListener('mouseout', () => {
+  document.querySelector('.port-img-4').classList.remove('port-hover');
+  document.querySelector('.port-info-4').classList.remove('port-cont-hover');
+  document.querySelector('.port-inner-4').classList.remove('port-info-hover');
+});
+
+
+
+
+// projectCard.forEach(i => {
+//   i.addEventListener('mouseover', () => {
+//     projectImage.classList.add('port-hover');
+//     projectContent.classList.add('port-cont-hover');
+//     projectText.classList.add('port-info-hover');
+//   });
+// })
+
+// projectCard.forEach(i => {
+//   i.addEventListener('mouseout', () => {
+//     projectImage.classList.remove('port-hover');
+//     projectContent.classList.remove('port-cont-hover');
+//     projectText.classList.remove('port-info-hover');
+//   })
+// })
+
+
+
+
+// projectCard.forEach(i => {
+//   i.addEventListener('mouseover', () => {
+//     for (let i = 0; i < projectCard.length; i++) {
+//       projectImage[i].classList.add('port-hover');
+//       projectContent[i].classList.add('port-cont-hover');
+//       projectText[i].classList.add('port-info-hover');
+//     }
+    
+//   })
+// })

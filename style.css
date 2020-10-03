@@ -65,6 +65,7 @@ header .header-container a {
 header .header-container a h1 {
   -webkit-transition: 100ms;
   transition: 100ms;
+  margin-bottom: 4px;
 }
 
 header .header-container .header-links {
@@ -72,7 +73,7 @@ header .header-container .header-links {
   display: -ms-flexbox;
   display: flex;
   font-size: 1.3em;
-  margin-bottom: 0;
+  margin-bottom: 4px;
 }
 
 header .header-container .header-links li:nth-child(2) {
@@ -108,7 +109,7 @@ header:hover a {
   -webkit-transition: 500ms;
   transition: 500ms;
   z-index: 100;
-  height: 70px;
+  height: 50px;
   background-color: rgba(255, 255, 255, 0.95);
   -webkit-box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
           box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
@@ -144,10 +145,10 @@ main .about-container {
   z-index: 2;
   position: absolute;
   top: 100vh;
-  height: 70vh;
+  height: 100vh;
   background-color: white;
   padding: 40px;
-  color: grey;
+  color: #c7c7c7;
 }
 
 main .about-container .about-inner-container {
@@ -163,7 +164,7 @@ main .about-container .about-inner-container .about-scroll {
 
 main .about-container .about-inner-container .about-scroll h1 {
   position: absolute;
-  top: 30px;
+  top: 60px;
   left: 0;
   opacity: 0;
   color: black;
@@ -176,7 +177,7 @@ main .about-container .about-inner-container .about-scroll h1 {
 
 main .about-container .about-inner-container .about-scroll p {
   position: relative;
-  top: 180px;
+  top: 250px;
   left: 80px;
   color: #c7c7c7;
   font-size: 1.5em;
@@ -188,13 +189,14 @@ main .about-container .about-inner-container .about-scroll p {
 
 main .about-container .about-inner-container .about-scroll .float-up {
   position: absolute;
-  top: 0;
+  top: 40px;
   left: 0;
   opacity: 1;
 }
 
 main .about-container .about-inner-container .about-scroll .float-in {
-  top: 180px;
+  color: gray;
+  top: 250px;
   left: 0;
   opacity: 1;
 }
@@ -222,7 +224,7 @@ main .skills-container .skills-inner-container .skills-scroll {
 
 main .skills-container .skills-inner-container .skills-scroll .skills-title {
   position: absolute;
-  top: 60px;
+  top: 100px;
   left: 0;
   opacity: 0;
   color: black;
@@ -235,14 +237,14 @@ main .skills-container .skills-inner-container .skills-scroll .skills-title {
 
 main .skills-container .skills-inner-container .skills-scroll .float-up {
   position: absolute;
-  top: 0;
+  top: 80px;
   left: 0;
   opacity: 1;
 }
 
 main .skills-container .skills-inner-container .skills-scroll .skills-flex {
   position: absolute;
-  top: 120px;
+  top: 290px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,48 +292,68 @@ main .portfolio-container {
   z-index: 2;
   position: absolute;
   top: 300vh;
-  height: 100vh;
+  height: 2000px;
   width: 100vw;
-  background-color: whitesmoke;
+  background-color: #ebebeb;
+}
+
+main .portfolio-container .port-float-up {
+  margin-top: 150px;
 }
 
 main .portfolio-container .portfolio-inner-container {
   width: 100%;
-  margin: 150px 10% 120px 10%;
+  margin: 0 10% 120px 10%;
 }
 
-main .portfolio-container .portfolio-inner-container h1 {
+main .portfolio-container .portfolio-inner-container .portfolio-title {
   color: black;
   font-size: 3.5em;
+  margin-top: 180px;
   margin-bottom: 60px;
   line-height: 60px;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container {
+main .portfolio-container .portfolio-inner-container .port-centering-cont {
   position: absolute;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(450px, auto);
-  grid-gap: 2em;
-  width: 80%;
-  padding: 10px;
-  margin-right: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  top: 0;
+  right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 370px;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 350px 350px;
+      grid-template-columns: 350px 350px;
+  -ms-grid-rows: 500px 500px;
+      grid-template-rows: 500px 500px;
+  grid-gap: 6em;
+  padding: 10px;
+}
+
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont {
   height: 500px;
   width: 350px;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-cont {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-cont {
   position: absolute;
   top: 0;
   left: 50%;
@@ -340,11 +362,12 @@ main .portfolio-container .portfolio-inner-container .portfolio-grid-container .
   height: 500px;
   width: 350px;
   z-index: 3;
+  border: solid;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-hover {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-hover {
   top: -160px;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
@@ -352,20 +375,32 @@ main .portfolio-container .portfolio-inner-container .portfolio-grid-container .
           transform-origin: center;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-cont-1 {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-1 {
   height: 100%;
   background-image: url("./images/resort.jpg");
   background-size: cover;
   background-position: center;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-cont-2 {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-2 {
   background-image: url("./images/shop.jpg");
   background-size: cover;
   background-position: center;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-3 {
+  background-image: url("./images/game.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-img-4 {
+  background-image: url("./images/colmar.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont {
   background: white;
   position: absolute;
   top: 0;
@@ -378,13 +413,13 @@ main .portfolio-container .portfolio-inner-container .portfolio-grid-container .
   transition: all 0.1s ease-in-out;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-info-hover {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-info-hover {
   opacity: 1 !important;
   -webkit-transition: all 300ms ease-in-out 100ms;
   transition: all 300ms ease-in-out 100ms;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,7 +435,7 @@ main .portfolio-container .portfolio-inner-container .portfolio-grid-container .
   opacity: 0;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-link-flex {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-link-flex {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -412,27 +447,27 @@ main .portfolio-container .portfolio-inner-container .portfolio-grid-container .
   width: 150px;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-link-flex a {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-link-flex a {
   font-size: 10px;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-link-flex .port-divider {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-link-flex .port-divider {
   width: 1px;
   height: 12px;
   background: #e0e0e0;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-site-description {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-site-description {
   font-size: 12px;
   text-align: center;
   margin: 10px 0;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-small-text {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-info-cont .port-inner-info .port-small-text {
   font-size: 10px;
 }
 
-main .portfolio-container .portfolio-inner-container .portfolio-grid-container .port-card-cont .port-rel-cont .port-cont-hover {
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-cont .port-rel-cont .port-cont-hover {
   top: 100px;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -440,10 +475,42 @@ main .portfolio-container .portfolio-inner-container .portfolio-grid-container .
           transform-origin: center;
 }
 
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container port-card-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/2/2;
+}
+
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container port-card-2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/2/3;
+}
+
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container port-card-3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2/1/3/2;
+}
+
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container port-card-4 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2/2/3/3;
+}
+
 main .contact-container {
   z-index: 2;
   position: absolute;
-  top: 480vh;
+  top: 475vh;
   height: 100vh;
   width: 100vw;
   background-color: whitesmoke;
@@ -455,6 +522,31 @@ main .contact-container .contact-inner-container .navbar-brand {
   margin-bottom: 60px;
   line-height: 60px;
   margin-top: 150px;
+}
+
+main footer {
+  position: absolute;
+  top: 565vh;
+  height: 120px;
+  width: 100vw;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000000;
+  z-index: 2;
+}
+
+main footer img {
+  height: 60px;
+  width: auto;
+  color: gray;
 }
 
 /*  Hero Image  */

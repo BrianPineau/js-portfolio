@@ -17,6 +17,11 @@ $titleColor: rgb(0, 0, 0);
   background-position: center;
 }
 
+@mixin imgbckgrnd2 () {
+  background-size: cover;
+  background-position: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -69,13 +74,14 @@ header {
       transition: 100ms;
       h1 {
         transition: 100ms;
+        margin-bottom: 4px;
       }
     }
 
     .header-links {
       display: flex;
       font-size: 1.3em;
-      margin-bottom: 0;
+      margin-bottom: 4px;
 
       li:nth-child(2) {
       margin: 0 1.4em;
@@ -110,7 +116,7 @@ header:hover {
   width: 100%;
   transition: 500ms;
   z-index: 100;
-  height: 70px;
+  height: 50px;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
   h1 {
@@ -138,10 +144,10 @@ main {
     z-index: 2;
     position: absolute;
     top: 100vh;
-    height: 70vh;
+    height: 100vh;
     background-color: rgb(255, 255, 255);
     padding: 40px;
-    color: grey;
+    color: #c7c7c7;
     .about-inner-container {
       width: 60%;
       margin: 150px 10% 0 10%;
@@ -151,7 +157,7 @@ main {
         width: 100%;
         h1 {
           position: absolute;
-          top: 30px;
+          top: 60px;
           left: 0;
           opacity: 0;
           @include sectionTitle();
@@ -160,7 +166,7 @@ main {
 
         p {
           position: relative;
-          top: 180px;
+          top: 250px;
           left: 80px;
           color: $textColor;
           font-size: 1.5em;
@@ -171,13 +177,14 @@ main {
 
         .float-up {
           position: absolute;
-          top: 0;
+          top: 40px;
           left: 0;
           opacity: 1;
         }
 
         .float-in {
-          top: 180px;
+          color: gray;
+          top: 250px;
           left: 0;
           opacity: 1;
         }
@@ -204,7 +211,7 @@ main {
         width: 100%;
         .skills-title {
           position: absolute;
-          top: 60px;
+          top: 100px;
           left: 0;
           opacity: 0;
           @include sectionTitle();
@@ -213,14 +220,14 @@ main {
 
         .float-up {
           position: absolute;
-          top: 0;
+          top: 80px;
           left: 0;
           opacity: 1;
         }
   
         .skills-flex {
           position: absolute;
-          top: 120px;
+          top: 290px;
           display: flex;
           width: 81%;
           .card {
@@ -266,119 +273,153 @@ main {
     z-index: 2;
     position: absolute;
     top: 300vh;
-    height: 100vh;
+    height: 2000px;
     width: 100vw;
-    background-color: rgb(245, 245, 245);
+    background-color: #ebebeb;
+
+    .port-float-up {
+      margin-top: 150px;
+    }
+
     .portfolio-inner-container {
       width: 100%;
-      margin: 150px 10% 120px 10%;
-      h1 {
-        @include sectionTitle();
+      margin: 0 10% 120px 10%;
+      .portfolio-title {
+        color: black;
+        font-size: 3.5em;
+        margin-top: 180px;
+        margin-bottom: 60px;
+        line-height: 60px;
       }
-      .portfolio-grid-container {
+
+      .port-centering-cont {
         position: absolute;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: minmax(450px, auto);
-        grid-gap: 2em;
-        width: 80%;
-        padding: 10px;
-        margin-right: 20%;
-
-
-
-        .port-card-cont {
-          height: 500px;
-          width: 350px;
-          .port-rel-cont {
-            position: relative;
-            height: 100%;
-            width: 100%;
-            .port-img-cont {
-              position: absolute;
-              top: 0;
-              left: 50%;
-              margin-left: -175px;
-              background-color: rebeccapurple;
-              height: 500px;
-              width: 350px;
-              z-index: 3;
-              transition: all 0.1s ease-in-out;
-            }
-
-            .port-hover {
-              top: -160px;
-              transform: scale(0.7);
-              transform-origin: center;
-            }
-
-            .port-img-cont-1 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        top: 0; right: 0;
+        justify-content: center;
+        margin-top: 370px;
+        .portfolio-grid-container {
+          display: grid;
+          grid-template-columns: 350px 350px;
+          grid-template-rows: 500px 500px;
+          grid-gap: 6em;
+          padding: 10px;
+          .port-card-cont {
+            height: 500px;
+            width: 350px;
+            .port-rel-cont {
+              position: relative;
               height: 100%;
-              background-image: url('./images/resort.jpg');
-              background-size: cover;
-              background-position: center;
-            }
-
-            .port-img-cont-2 {
-              background-image: url('./images/shop.jpg');
-              background-size: cover;
-              background-position: center;
-            }
-  
-            .port-info-cont {
-              background: white;
-              position: absolute;
-              top: 0;
-              left: 50%;
-              margin-left: -150px;
-              height: 350px;
-              width: 300px;
-              z-index: 2;
-              transition: all 0.1s ease-in-out;
-
-              .port-info-hover {
-                opacity: 1 !important;
-                transition: all 300ms ease-in-out 100ms;
+              width: 100%;
+              .port-img-cont {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                margin-left: -175px;
+                background-color: rebeccapurple;
+                height: 500px;
+                width: 350px;
+                z-index: 3;
+                border: solid;
+                transition: all 0.1s ease-in-out;
               }
-
-              .port-inner-info {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+  
+              .port-hover {
+                top: -160px;
+                transform: scale(0.7);
+                transform-origin: center;
+              }
+  
+              .port-img-1 {
                 height: 100%;
-                margin: 180px 10px 10px;
-                opacity: 0;
-                .port-link-flex {
-                  display: inline-flex;
-                  justify-content: space-around;
+                background-image: url('./images/resort.jpg');
+                @include imgbckgrnd2();
+              }
+  
+              .port-img-2 {
+                background-image: url('./images/shop.jpg');
+                @include imgbckgrnd2();
+              }
+  
+              .port-img-3 {
+                background-image: url('./images/game.jpg');
+                @include imgbckgrnd2();
+              }
+              
+              .port-img-4 {
+                background-image: url('./images/colmar.jpg');
+                @include imgbckgrnd2();
+              }
+    
+              .port-info-cont {
+                background: white;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                margin-left: -150px;
+                height: 350px;
+                width: 300px;
+                z-index: 2;
+                transition: all 0.1s ease-in-out;
+  
+                .port-info-hover {
+                  opacity: 1 !important;
+                  transition: all 300ms ease-in-out 100ms;
+                }
+  
+                .port-inner-info {
+                  display: flex;
+                  flex-direction: column;
                   align-items: center;
-                  width: 150px;
-                  a {
+                  height: 100%;
+                  margin: 180px 10px 10px;
+                  opacity: 0;
+                  .port-link-flex {
+                    display: inline-flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 150px;
+                    a {
+                      font-size: 10px;
+                    }
+                    .port-divider {
+                      width: 1px;
+                      height: 12px;
+                      background: rgb(224, 224, 224);
+                    }
+                  }
+                  .port-site-description {
+                    font-size: 12px;
+                    text-align: center;
+                    margin: 10px 0;
+                  }
+  
+                  .port-small-text {
                     font-size: 10px;
                   }
-                  .port-divider {
-                    width: 1px;
-                    height: 12px;
-                    background: rgb(224, 224, 224);
-                  }
-                }
-                .port-site-description {
-                  font-size: 12px;
-                  text-align: center;
-                  margin: 10px 0;
-                }
-
-                .port-small-text {
-                  font-size: 10px;
                 }
               }
+  
+              .port-cont-hover {
+                top: 100px;
+                transform: scale(1.5);
+                transform-origin: center;
+              }
             }
-
-            .port-cont-hover {
-              top: 100px;
-              transform: scale(1.5);
-              transform-origin: center;
-            }
+          }
+          port-card-1 {
+            grid-area: 1/1/2/2;
+          }
+          port-card-2 {
+            grid-area: 1/2/2/3;
+          }
+          port-card-3 {
+            grid-area: 2/1/3/2;
+          }
+          port-card-4 {
+            grid-area: 2/2/3/3;
           }
         }
       }
@@ -389,7 +430,7 @@ main {
   .contact-container {
     z-index: 2;
     position: absolute;
-    top: 480vh;
+    top: 475vh;
     height: 100vh;
     width: 100vw;
     background-color: rgb(245, 245, 245);
@@ -398,6 +439,23 @@ main {
         @include sectionTitle();
         margin-top: 150px;
       }
+    }
+  }
+  footer {
+    position: absolute;
+    top: 565vh;
+    height: 120px;
+    width: 100vw;
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #000000;
+    z-index: 2;
+    img {
+      height: 60px;
+      width: auto;
+      color: gray;
     }
   }
 }
@@ -456,6 +514,7 @@ main {
     transform: translateZ(-1px) scale(2);
     z-index: -1;
     min-height: 100vh;
+    
 }
 
 
