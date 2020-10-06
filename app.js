@@ -14,7 +14,12 @@ let projectImage = document.querySelector('.port-img-cont');
 let projectContent = document.querySelector('.port-info-cont');
 let projectText = document.querySelector('.port-inner-info');
 let portfolioTitle = document.querySelector('.portfolio-title');
+let portfolioContainer = document.querySelector('.portfolio-grid-container');
 
+let portCard1 = document.querySelector('.port-card-1');
+let portCard2 = document.querySelector('.port-card-2');
+let portCard3 = document.querySelector('.port-card-3');
+let portCard4 = document.querySelector('.port-card-4');
 
 //Website Loader
 document.onreadystatechange = function() { 
@@ -55,7 +60,7 @@ let controller = new ScrollMagic.Controller();
 //  Header Shrink Scroll Animation
 let scene = new ScrollMagic.Scene({
   triggerElement: '.hook-lead',
-  triggerHook: '0'
+  triggerHook: '0',
 })
   .setClassToggle(entireHeader, 'header-shrink') // Add class to header
   .addTo(controller);
@@ -63,7 +68,8 @@ let scene = new ScrollMagic.Scene({
 //  About Header Scroll Animation
 let scene2 = new ScrollMagic.Scene({
   triggerElement: '.about-container',
-  triggerHook: '0.6'
+  triggerHook: '0.55',
+  reverse: false
 })
   .setClassToggle(aboutTitle, 'float-up') // Add class to header
   .addTo(controller);
@@ -71,7 +77,8 @@ let scene2 = new ScrollMagic.Scene({
 //  About Body Scroll Animation
 let scene3 = new ScrollMagic.Scene({
   triggerElement: '.about-container',
-  triggerHook: '0.4'
+  triggerHook: '0.45',
+  reverse: false
 })
   .setClassToggle(aboutText, 'float-in') // Add class to header
   .addTo(controller);
@@ -79,7 +86,8 @@ let scene3 = new ScrollMagic.Scene({
 //  Skills Header Scroll Animation 
 let scene4 = new ScrollMagic.Scene({
   triggerElement: '.skills-container',
-  triggerHook: '0.6'
+  triggerHook: '0.55',
+  reverse: false
 })
   .setClassToggle(skillsTitle, 'float-up')
   .addTo(controller);
@@ -87,7 +95,8 @@ let scene4 = new ScrollMagic.Scene({
 //  Skills 1st Card Scroll Animation
 let scene5 = new ScrollMagic.Scene({
   triggerElement: '.skills-title',
-  triggerHook: '0.6'
+  triggerHook: '0.6',
+  reverse: false
 })
   .setClassToggle(firstCard, 'card-up-1')
   .addTo(controller);
@@ -95,7 +104,8 @@ let scene5 = new ScrollMagic.Scene({
 //  Skills 2nd Card Scroll Animations
 let scene6 = new ScrollMagic.Scene({
   triggerElement: '.skills-title',
-  triggerHook: '0.6'
+  triggerHook: '0.6',
+  reverse: false
 })
   .setClassToggle(secondCard, 'card-up-2') // Add class to header
   .addTo(controller);
@@ -103,7 +113,8 @@ let scene6 = new ScrollMagic.Scene({
 //  Skills 3rd Card Scroll Animations
 let scene7 = new ScrollMagic.Scene({
   triggerElement: '.skills-title',
-  triggerHook: '0.6'
+  triggerHook: '0.6',
+  reverse: false
 })
   .setClassToggle(thirdCard, 'card-up-3') // Add class to header
   .addTo(controller);
@@ -111,16 +122,57 @@ let scene7 = new ScrollMagic.Scene({
 //  Portfolio Title Scroll Animations
 let scene8 = new ScrollMagic.Scene({
   triggerElement: '.portfolio-title',
-  triggerHook: '0.1'
+  triggerHook: '0.7',
+  reverse: false
 })
   .setClassToggle(portfolioTitle, 'port-float-up') // Add class to header
-  scene5.addIndicators({
-    name: 'shrink header', // custom name for your scene
-    colorStart: 'red',
-    colorTrigger: 'green',
-   })
+  .addTo(controller);
+  
+
+//  Portfolio 1st Card Animation
+let scene9 = new ScrollMagic.Scene({
+  triggerElement: '.portfolio-grid-container',
+  triggerHook: '0.65',
+  reverse: false
+})
+  .setClassToggle(portCard1, 'port-rise-1') // Add class to header
+  .addTo(controller);
+  
+//  Portfolio 2nd Card Animation
+let scene10 = new ScrollMagic.Scene({
+  triggerElement: '.portfolio-grid-container',
+  triggerHook: '0.65',
+  reverse: false
+})
+  .setClassToggle(portCard2, 'port-rise-2') // Add class to header
+  .addTo(controller);
+  
+//  Portfolio 3rd Card Animation
+let scene11 = new ScrollMagic.Scene({
+  triggerElement: '.portfolio-grid-container',
+  triggerHook: '0.35',
+  reverse: false
+})
+  .setClassToggle(portCard3, 'port-rise-3') // Add class to header
+  .addTo(controller);
+  
+//  Portfolio 4th Card Animation
+let scene12 = new ScrollMagic.Scene({
+  triggerElement: '.portfolio-grid-container',
+  triggerHook: '0.35',
+  reverse: false
+})
+  .setClassToggle(portCard4, 'port-rise-4') // Add class to header
+  // scene12.addIndicators({
+  //   name: 'Portfolio Title', // custom name for your scene
+  //   colorStart: 'red',
+  //   colorTrigger: 'green',
+  //  })
   .addTo(controller);
 
+
+
+  
 
 
 

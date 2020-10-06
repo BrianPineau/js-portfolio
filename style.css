@@ -165,19 +165,19 @@ main .about-container .about-inner-container .about-scroll {
 main .about-container .about-inner-container .about-scroll h1 {
   position: absolute;
   top: 60px;
-  left: 0;
+  left: 20px;
   opacity: 0;
   color: black;
   font-size: 3.5em;
   margin-bottom: 60px;
   line-height: 60px;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 main .about-container .about-inner-container .about-scroll p {
   position: relative;
-  top: 250px;
+  top: 270px;
   left: 80px;
   color: #c7c7c7;
   font-size: 1.5em;
@@ -225,14 +225,14 @@ main .skills-container .skills-inner-container .skills-scroll {
 main .skills-container .skills-inner-container .skills-scroll .skills-title {
   position: absolute;
   top: 100px;
-  left: 0;
+  left: 20px;
   opacity: 0;
   color: black;
   font-size: 3.5em;
   margin-bottom: 60px;
   line-height: 60px;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 main .skills-container .skills-inner-container .skills-scroll .float-up {
@@ -267,8 +267,8 @@ main .skills-container .skills-inner-container .skills-scroll .skills-flex .card
 }
 
 main .skills-container .skills-inner-container .skills-scroll .skills-flex .card-1 {
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 main .skills-container .skills-inner-container .skills-scroll .skills-flex .card-2 {
@@ -298,7 +298,9 @@ main .portfolio-container {
 }
 
 main .portfolio-container .port-float-up {
-  margin-top: 150px;
+  margin-top: 150px !important;
+  margin-left: 0 !important;
+  opacity: 1 !important;
 }
 
 main .portfolio-container .portfolio-inner-container {
@@ -308,10 +310,14 @@ main .portfolio-container .portfolio-inner-container {
 
 main .portfolio-container .portfolio-inner-container .portfolio-title {
   color: black;
+  opacity: 0;
   font-size: 3.5em;
   margin-top: 180px;
   margin-bottom: 60px;
+  margin-left: 20px;
   line-height: 60px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 main .portfolio-container .portfolio-inner-container .port-centering-cont {
@@ -475,36 +481,40 @@ main .portfolio-container .portfolio-inner-container .port-centering-cont .portf
           transform-origin: center;
 }
 
-main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container port-card-1 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1/1/2/2;
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-1 {
+  margin: 100px 0 0 40px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
 }
 
-main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container port-card-2 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 1/2/2/3;
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-2 {
+  margin: 100px 0 0 40px;
+  -webkit-transition: all 0.5s ease-in-out 50ms;
+  transition: all 0.5s ease-in-out 50ms;
+  opacity: 0;
 }
 
-main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container port-card-3 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 2/1/3/2;
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-3 {
+  margin: 100px 0 0 40px;
+  -webkit-transition: all 0.5s ease-in-out 100ms;
+  transition: all 0.5s ease-in-out 100ms;
+  opacity: 0;
 }
 
-main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container port-card-4 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 2/2/3/3;
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-card-4 {
+  margin: 100px 0 0 40px;
+  -webkit-transition: all 0.5s ease-in-out 150ms;
+  transition: all 0.5s ease-in-out 150ms;
+  opacity: 0;
+}
+
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-rise-1,
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-rise-2,
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-rise-3,
+main .portfolio-container .portfolio-inner-container .port-centering-cont .portfolio-grid-container .port-rise-4 {
+  margin: 0;
+  opacity: 1;
 }
 
 main .contact-container {
@@ -533,9 +543,9 @@ main footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
