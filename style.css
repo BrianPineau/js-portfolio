@@ -72,20 +72,143 @@ header .header-container .header-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.3em;
   margin-bottom: 4px;
+  height: 100%;
+}
+
+header .header-container .header-links li {
+  height: 100%;
+}
+
+header .header-container .header-links li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #c7c7c7;
+  height: 100%;
+  width: 110px;
+  padding: 0 2px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+header .header-container .header-links li a .head-cover-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+header .header-container .header-links li a .colored-link-1 {
+  -webkit-animation-name: colorLink;
+          animation-name: colorLink;
+}
+
+@-webkit-keyframes colorLink {
+  0% {
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: blue;
+    opacity: 0.5;
+  }
+  50% {
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    opacity: 0.1;
+  }
+  51% {
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: blue;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: blue;
+    opacity: 1;
+  }
+}
+
+@keyframes colorLink {
+  0% {
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: blue;
+    opacity: 0.5;
+  }
+  50% {
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    opacity: 0.1;
+  }
+  51% {
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: blue;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: blue;
+    opacity: 1;
+  }
 }
 
 header .header-container .header-links li:nth-child(2) {
-  margin: 0 1.4em;
+  margin: 0 2px;
 }
 
 header .header-container .header-links li:nth-child(3) {
-  margin-right: 1.4em;
-}
-
-header .header-container .header-links a {
-  color: #c7c7c7;
+  margin-right: 2px;
 }
 
 header:hover {
@@ -109,7 +232,7 @@ header:hover a {
   -webkit-transition: 500ms;
   transition: 500ms;
   z-index: 100;
-  height: 50px;
+  height: 80px;
   background-color: rgba(255, 255, 255, 0.95);
   -webkit-box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
           box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
@@ -178,7 +301,6 @@ main .about-container .about-inner-container .about-scroll h1 {
 main .about-container .about-inner-container .about-scroll p {
   position: relative;
   top: 270px;
-  left: 80px;
   color: #c7c7c7;
   font-size: 1.5em;
   line-height: 45px;
@@ -269,15 +391,18 @@ main .skills-container .skills-inner-container .skills-scroll .skills-flex .card
 main .skills-container .skills-inner-container .skills-scroll .skills-flex .card-1 {
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+  top: 40px;
 }
 
 main .skills-container .skills-inner-container .skills-scroll .skills-flex .card-2 {
   margin: 0 60px;
+  top: 40px;
   -webkit-transition: all 0.5s ease-in-out 0.2s;
   transition: all 0.5s ease-in-out 0.2s;
 }
 
 main .skills-container .skills-inner-container .skills-scroll .skills-flex .card-3 {
+  top: 40px;
   -webkit-transition: all 0.5s ease-in-out 0.4s;
   transition: all 0.5s ease-in-out 0.4s;
 }
@@ -285,6 +410,7 @@ main .skills-container .skills-inner-container .skills-scroll .skills-flex .card
 main .skills-container .skills-inner-container .skills-scroll .skills-flex .card-up-1,
 main .skills-container .skills-inner-container .skills-scroll .skills-flex .card-up-2,
 main .skills-container .skills-inner-container .skills-scroll .skills-flex .card-up-3 {
+  top: 0;
   opacity: 1;
 }
 
@@ -523,7 +649,8 @@ main .contact-container {
   top: 475vh;
   height: 100vh;
   width: 100vw;
-  background-color: whitesmoke;
+  padding: 0 10%;
+  background-color: #dddddd;
 }
 
 main .contact-container .contact-inner-container .navbar-brand {
@@ -531,7 +658,31 @@ main .contact-container .contact-inner-container .navbar-brand {
   font-size: 3.5em;
   margin-bottom: 60px;
   line-height: 60px;
-  margin-top: 150px;
+  position: absolute;
+  top: 190px;
+  left: 40px;
+  opacity: 0;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+
+main .contact-container .contact-inner-container .nav-up {
+  top: 150px;
+  left: 0;
+  opacity: 1;
+}
+
+main .contact-container .contact-inner-container .contact-body-cont {
+  position: absolute;
+  top: 350px;
+  opacity: 0;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+
+main .contact-container .contact-inner-container .contact-body-up {
+  top: 310px !important;
+  opacity: 1;
 }
 
 main footer {
@@ -569,13 +720,6 @@ main footer img {
           transform-style: inherit;
   width: 100vw;
   text-align: left;
-}
-
-.jumbo-foreground #loader {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  z-index: 3;
 }
 
 .jumbo-foreground .hook-lead {

@@ -15,10 +15,14 @@
     <div class="header-container">
       <a href="#" class="brand-logo"><h1>Brian Pineau</h1></a>
       <ul class="header-links">
-        <li><a href="#about-container">About Me</a></li>
-        <li><a href="#skills-container">Skills</a></li>
-        <li><a href="#portfolio-container">My Portfolio</a></li>
-        <li><a href="#contact-container">Contact Me</a></li>
+        <li>
+          <a class="head-link-1" href="#about-container">About Me
+            <div class="head-cover head-cover-1"></div>
+          </a>
+        </li>
+        <li><a class="head-link-2" href="#skills-container">Skills<div class="head-cover head-cover-2"></div></a></li>
+        <li><a class="head-link-3" href="#portfolio-container">My Portfolio<div class="head-cover head-cover-3"></div></a></li>
+        <li><a class="head-link-4" href="#contact-container">Contact Me<div class="head-cover head-cover-4"></div></a></li>
       </ul>
     </div>
   </header>
@@ -229,7 +233,7 @@
           </div>
         </nav>
       
-        <div class="container">
+        <div class="container contact-body-cont">
         <?php if($msg != ''): ?>
           <div class="alert <?php echo $msgClass; ?>"><?php echo $msg; ?></div>
         <?php endif;  ?>
@@ -262,7 +266,7 @@
   
     
     <section class="jumbo-foreground">
-      <img id="loader" src="./images/loader.svg" alt="loader">
+      <!-- <img id="loader" src="./images/loader.svg" alt="loader"> -->
       <div class="hook-lead"></div>
       <h1 id="text-type">MAKE WEBSITES GREAT AGAIN</h1>
     </section>

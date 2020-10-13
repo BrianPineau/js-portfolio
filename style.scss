@@ -86,20 +86,83 @@ header {
 
     .header-links {
       display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 1.3em;
       margin-bottom: 4px;
+      height: 100%;
+      li {
+        height: 100%;
+        a {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $textColor;
+          height: 100%;
+          width: 110px;
+          padding: 0 2px;
+          text-align: center;
+          z-index: 1;
+          // background: lightcoral;
+          overflow: hidden;
+          .head-cover-1 {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 100%;
+            z-index: -1;
+            animation-duration: 1000ms;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+            transition: all 0.1s ease-in-out;
+          }
+
+          .colored-link-1 {
+            animation-name: colorLink;
+          }
+
+          @keyframes colorLink {
+            0% {
+              top: -100%; left: 0; right: 0;
+              height: 100%;
+              background: blue;
+              opacity: 0.5;
+            }
+            50% {
+              top: 100%; left: 0; right: 0; bottom: 0;
+              height: 100%;
+              opacity: 0.1;
+            }
+            51% {
+              top: 100%; left: 0; right: 0; bottom: 0;
+              height: 100%;
+              background: blue;
+              opacity: 1;
+            }
+
+            100% {
+              top: 0; left: 0; right: 0; bottom: 0;
+              height: 100%;
+              background: blue;
+              opacity: 1;
+            }
+          }
+
+          // .heads-down-1 {
+          //   top: 0;
+          //   bottom: 0;
+          // }
+        }
+      }
 
       li:nth-child(2) {
-      margin: 0 1.4em;
+      margin: 0 2px;
       }
 
       li:nth-child(3) {
-        margin-right: 1.4em;
+        margin-right: 2px;
       }
 
-      a {
-        color: $textColor;
-      }
     }
   }
 }
@@ -122,7 +185,7 @@ header:hover {
   width: 100%;
   transition: 500ms;
   z-index: 100;
-  height: 50px;
+  height: 80px;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 10px 20px rgba(148, 148, 148, 0.3);
   h1 {
@@ -173,7 +236,6 @@ main {
         p {
           position: relative;
           top: 270px;
-          left: 80px;
           color: $textColor;
           font-size: 1.5em;
           line-height: 45px;
@@ -252,20 +314,24 @@ main {
 
           .card-1 {
             transition: $basicTransition;
+            top: 40px;
           }
   
           .card-2 {
             margin: 0 60px;
+            top: 40px;
             transition: all 0.5s ease-in-out 0.2s;
           }
 
           .card-3 {
+            top: 40px;
             transition: all 0.5s ease-in-out 0.4s;
           }
 
           .card-up-1,
           .card-up-2,
           .card-up-3 {
+            top: 0;
             opacity: 1;
           }
         }
@@ -460,11 +526,34 @@ main {
     top: 475vh;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(245, 245, 245);
+    padding: 0 10%;
+    background-color: #dddddd;
     .contact-inner-container {
       .navbar-brand {
         @include sectionTitle();
-        margin-top: 150px;
+        position: absolute;
+        top: 190px;
+        left: 40px;
+        opacity: 0;
+        transition: all 250ms ease-out;
+      }
+
+      .nav-up {
+        top: 150px;
+        left: 0;
+        opacity: 1;
+      }
+
+      .contact-body-cont {
+        position: absolute;
+        top: 350px;
+        opacity: 0;
+        transition: all 250ms ease-out;
+      }
+
+      .contact-body-up {
+        top: 310px !important;
+        opacity: 1;
       }
     }
   }
@@ -495,12 +584,12 @@ main {
   transform-style: inherit;
   width: 100vw;
   text-align: left;
-  #loader {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: 3
-  }
+  // #loader {
+  //   position: absolute;
+  //   height: 100vh;
+  //   width: 100vw;
+  //   z-index: 3
+  // }
 
   .hook-lead {
     position: absolute;

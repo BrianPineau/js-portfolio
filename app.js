@@ -15,6 +15,9 @@ let projectContent = document.querySelector('.port-info-cont');
 let projectText = document.querySelector('.port-inner-info');
 let portfolioTitle = document.querySelector('.portfolio-title');
 let portfolioContainer = document.querySelector('.portfolio-grid-container');
+let contactContainer = document.querySelector('.contact-container');
+let navbarBrand = document.querySelector('.navbar-brand');
+let contactBody = document.querySelectorAll('.contact-body-cont');
 
 let portCard1 = document.querySelector('.port-card-1');
 let portCard2 = document.querySelector('.port-card-2');
@@ -22,15 +25,36 @@ let portCard3 = document.querySelector('.port-card-3');
 let portCard4 = document.querySelector('.port-card-4');
 
 //Website Loader
-document.onreadystatechange = function() { 
-  if (document.readyState !== "complete") { 
-      document.querySelector("body").style.visibility = "hidden"; 
-      document.querySelector("#loader").style.visibility = "visible"; 
-  } else { 
-      document.querySelector("#loader").style.display = "none"; 
-      document.querySelector("body").style.visibility = "visible"; 
-  } 
-}; 
+// document.onreadystatechange = function() { 
+//   if (document.readyState !== "complete") { 
+//       document.querySelector("body").style.visibility = "hidden"; 
+//       document.querySelector("#loader").style.visibility = "visible"; 
+//   } else { 
+//       document.querySelector("#loader").style.display = "none"; 
+//       document.querySelector("body").style.visibility = "visible"; 
+//   } 
+// }; 
+
+
+//Header Links Hover Color Effect
+document.querySelector('.head-link-1').addEventListener('mouseover', function () {
+  document.querySelector('.head-cover-1').classList.add('colored-link-1');
+})
+
+document.querySelector('.head-link-1').addEventListener('mouseout', function () {
+  document.querySelector('.head-cover-1').classList.remove('colored-link-1');
+})
+
+
+//  Header Links Hover Effects
+// document.querySelector('.head-link-1').addEventListener('mouseover', () => {
+//   document.querySelector('.head-cover-1').classList.add('heads-down-1');
+// });
+
+
+// document.querySelector('.head-link-1').addEventListener('mouseout', () => {
+//   document.querySelector('.head-cover-1').classList.remove('heads-down-1');
+// });
 
 
 
@@ -77,7 +101,7 @@ let scene2 = new ScrollMagic.Scene({
 //  About Body Scroll Animation
 let scene3 = new ScrollMagic.Scene({
   triggerElement: '.about-container',
-  triggerHook: '0.45',
+  triggerHook: '0.25',
   reverse: false
 })
   .setClassToggle(aboutText, 'float-in') // Add class to header
@@ -132,7 +156,7 @@ let scene8 = new ScrollMagic.Scene({
 //  Portfolio 1st Card Animation
 let scene9 = new ScrollMagic.Scene({
   triggerElement: '.portfolio-grid-container',
-  triggerHook: '0.65',
+  triggerHook: '0.75',
   reverse: false
 })
   .setClassToggle(portCard1, 'port-rise-1') // Add class to header
@@ -141,7 +165,7 @@ let scene9 = new ScrollMagic.Scene({
 //  Portfolio 2nd Card Animation
 let scene10 = new ScrollMagic.Scene({
   triggerElement: '.portfolio-grid-container',
-  triggerHook: '0.65',
+  triggerHook: '0.75',
   reverse: false
 })
   .setClassToggle(portCard2, 'port-rise-2') // Add class to header
@@ -162,12 +186,30 @@ let scene12 = new ScrollMagic.Scene({
   triggerHook: '0.35',
   reverse: false
 })
-  .setClassToggle(portCard4, 'port-rise-4') // Add class to header
-  // scene12.addIndicators({
+  .setClassToggle(portCard4, 'port-rise-4')
+  .addTo(controller);
+
+//  Contact Title Animation
+let scene13 = new ScrollMagic.Scene({
+  triggerElement: '.contact-container',
+  triggerHook: '0.65',
+  reverse: false
+})
+  .setClassToggle(navbarBrand, 'nav-up') // Add class to header
+  .addTo(controller);
+  
+//  Contact Body Animation
+let scene14 = new ScrollMagic.Scene({
+  triggerElement: '.contact-container',
+  triggerHook: '0.45',
+  reverse: false
+})
+  .setClassToggle(contactBody, 'contact-body-up') // Add class to header
+  // scene14.addIndicators({
   //   name: 'Portfolio Title', // custom name for your scene
   //   colorStart: 'red',
   //   colorTrigger: 'green',
-  //  })
+  // })
   .addTo(controller);
 
 
