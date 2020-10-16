@@ -65,14 +65,15 @@ var typewriter = new Typewriter(typePhrase, {
     loop: true
 });
 
-typewriter.typeString('Make websites great again!')
-    .pauseFor(2500)
+typewriter.typeString('Modern Web Development')
+    .pauseFor(2000)
     .deleteAll()
-    .typeString('Strings can be removed')
-    .pauseFor(2500)
-    .deleteChars(7)
-    .typeString('<strong>altered!</strong>')
-    .pauseFor(2500)
+    .typeString('Responsive Design')
+    .pauseFor(2000)
+    // .deleteChars(7)
+    .deleteAll()
+    .typeString('Brand Identity')
+    .pauseFor(2000)
     .start();
 
 
