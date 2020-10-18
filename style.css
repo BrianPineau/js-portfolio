@@ -124,85 +124,6 @@ header .header-container .header-links li a .head-cover-1 {
   transition: all 0.1s ease-in-out;
 }
 
-header .header-container .header-links li a .colored-link-1 {
-  -webkit-animation-name: colorLink;
-          animation-name: colorLink;
-}
-
-@-webkit-keyframes colorLink {
-  0% {
-    top: -100%;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: blue;
-    opacity: 0.5;
-  }
-  50% {
-    top: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    opacity: 0.1;
-  }
-  51% {
-    top: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    background: blue;
-    opacity: 1;
-  }
-  100% {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    background: blue;
-    opacity: 1;
-  }
-}
-
-@keyframes colorLink {
-  0% {
-    top: -100%;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: blue;
-    opacity: 0.5;
-  }
-  50% {
-    top: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    opacity: 0.1;
-  }
-  51% {
-    top: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    background: blue;
-    opacity: 1;
-  }
-  100% {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    background: blue;
-    opacity: 1;
-  }
-}
-
 header .header-container .header-links li:nth-child(2) {
   margin: 0 2px;
 }
@@ -246,6 +167,14 @@ header:hover a {
   color: black !important;
 }
 
+@media only screen and (max-width: 900px) {
+  .head-link-1,
+  .head-link-2,
+  .head-link-3 {
+    display: none;
+  }
+}
+
 /*  Body/Parallax  */
 main {
   margin: 0;
@@ -287,8 +216,8 @@ main .about-container .about-inner-container .about-scroll {
 
 main .about-container .about-inner-container .about-scroll h1 {
   position: absolute;
-  top: 60px;
-  left: 20px;
+  top: 80px;
+  left: 40px;
   opacity: 0;
   color: black;
   font-size: 3.5em;
@@ -300,7 +229,7 @@ main .about-container .about-inner-container .about-scroll h1 {
 
 main .about-container .about-inner-container .about-scroll p {
   position: relative;
-  top: 320px;
+  top: 420px;
   color: #c7c7c7;
   font-size: 1.5em;
   line-height: 45px;
@@ -311,14 +240,14 @@ main .about-container .about-inner-container .about-scroll p {
 
 main .about-container .about-inner-container .about-scroll .float-up {
   position: absolute;
-  top: 0;
+  top: 40px;
   left: 0;
   opacity: 1;
 }
 
 main .about-container .about-inner-container .about-scroll .float-in {
   color: gray;
-  top: 280px;
+  top: 350px;
   left: 0;
   opacity: 1;
 }
@@ -366,7 +295,7 @@ main .skills-container .skills-inner-container .skills-scroll .float-up {
 
 main .skills-container .skills-inner-container .skills-scroll .skills-flex {
   position: absolute;
-  top: 290px;
+  top: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,7 +360,7 @@ main .portfolio-container {
 }
 
 main .portfolio-container .port-float-up {
-  margin-top: 150px !important;
+  margin-top: 230px !important;
   margin-left: 0 !important;
   opacity: 1 !important;
 }
@@ -445,7 +374,7 @@ main .portfolio-container .portfolio-inner-container .portfolio-title {
   color: black;
   opacity: 0;
   font-size: 3.5em;
-  margin-top: 180px;
+  margin-top: 270px;
   margin-bottom: 60px;
   margin-left: 20px;
   line-height: 60px;
@@ -462,7 +391,7 @@ main .portfolio-container .portfolio-inner-container .port-centering-cont {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  top: 0;
+  top: 100px;
   right: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -666,7 +595,7 @@ main .contact-container .contact-inner-container .navbar-brand {
   margin-bottom: 60px;
   line-height: 60px;
   position: absolute;
-  top: 190px;
+  top: 270px;
   left: 40px;
   opacity: 0;
   -webkit-transition: all 250ms ease-out;
@@ -674,21 +603,21 @@ main .contact-container .contact-inner-container .navbar-brand {
 }
 
 main .contact-container .contact-inner-container .nav-up {
-  top: 150px;
+  top: 230px;
   left: 0;
   opacity: 1;
 }
 
 main .contact-container .contact-inner-container .contact-body-cont {
   position: absolute;
-  top: 350px;
+  top: 420px;
   opacity: 0;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
 
 main .contact-container .contact-inner-container .contact-body-up {
-  top: 310px !important;
+  top: 380px !important;
   opacity: 1;
 }
 
@@ -709,6 +638,23 @@ main footer {
           align-items: center;
   background-color: #000000;
   z-index: 2;
+}
+
+main footer .footer-pop {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -100px;
+  font-size: 3em;
+  color: black;
+  opacity: 0;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+
+main footer .footer-up {
+  top: -52px;
+  opacity: 1;
 }
 
 main footer img {

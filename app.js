@@ -24,26 +24,15 @@ let portCard2 = document.querySelector('.port-card-2');
 let portCard3 = document.querySelector('.port-card-3');
 let portCard4 = document.querySelector('.port-card-4');
 
-//Website Loader
-// document.onreadystatechange = function() { 
-//   if (document.readyState !== "complete") { 
-//       document.querySelector("body").style.visibility = "hidden"; 
-//       document.querySelector("#loader").style.visibility = "visible"; 
-//   } else { 
-//       document.querySelector("#loader").style.display = "none"; 
-//       document.querySelector("body").style.visibility = "visible"; 
-//   } 
-// }; 
-
 
 //Header Links Hover Color Effect
-document.querySelector('.head-link-1').addEventListener('mouseover', function () {
-  document.querySelector('.head-cover-1').classList.add('colored-link-1');
-})
+// document.querySelector('.head-link-1').addEventListener('mouseover', function () {
+//   document.querySelector('.head-cover-1').classList.add('colored-link-1');
+// })
 
-document.querySelector('.head-link-1').addEventListener('mouseout', function () {
-  document.querySelector('.head-cover-1').classList.remove('colored-link-1');
-})
+// document.querySelector('.head-link-1').addEventListener('mouseout', function () {
+//   document.querySelector('.head-cover-1').classList.remove('colored-link-1');
+// })
 
 
 //  Header Links Hover Effects
@@ -272,33 +261,11 @@ projectCard4.addEventListener('mouseout', () => {
 
 
 
+//  Footer Link Text Pop-up
+document.querySelector('.footer-link').addEventListener('mouseover', () => {
+  document.querySelector('.footer-pop').classList.add('footer-up');
+})
 
-// projectCard.forEach(i => {
-//   i.addEventListener('mouseover', () => {
-//     projectImage.classList.add('port-hover');
-//     projectContent.classList.add('port-cont-hover');
-//     projectText.classList.add('port-info-hover');
-//   });
-// })
-
-// projectCard.forEach(i => {
-//   i.addEventListener('mouseout', () => {
-//     projectImage.classList.remove('port-hover');
-//     projectContent.classList.remove('port-cont-hover');
-//     projectText.classList.remove('port-info-hover');
-//   })
-// })
-
-
-
-
-// projectCard.forEach(i => {
-//   i.addEventListener('mouseover', () => {
-//     for (let i = 0; i < projectCard.length; i++) {
-//       projectImage[i].classList.add('port-hover');
-//       projectContent[i].classList.add('port-cont-hover');
-//       projectText[i].classList.add('port-info-hover');
-//     }
-    
-//   })
-// })
+document.querySelector('.footer-link').addEventListener('mouseout', () => {
+  document.querySelector('.footer-pop').classList.remove('footer-up');
+})
